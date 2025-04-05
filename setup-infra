@@ -27,7 +27,6 @@ IAMFullAccess
     ]
 }
 ```
-Attach this policy to your user as well
 
 # AWSCLI
 
