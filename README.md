@@ -1,2 +1,0 @@
-# eks-jenkins-project
-##Hello
