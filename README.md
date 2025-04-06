@@ -1,1 +1,1 @@
-# eks-jenkins-project
+# eks-jenkins-project build and deploy
