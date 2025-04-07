@@ -84,18 +84,16 @@ eksctl create nodegroup --cluster=EKS-1 \
 ### Creating Service Account
 
 
-```yaml
+
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: jenkins
   namespace: webapps
-```
+
 
 ### Create Role 
 
-
-```yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
@@ -133,12 +131,11 @@ rules:
       - serviceaccounts
       - services
     verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
-```
+
 
 ### Bind the role to service account
 
 
-```yaml
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
@@ -152,7 +149,7 @@ subjects:
 - namespace: webapps 
   kind: ServiceAccount
   name: jenkins 
-```
+
 
 ### Generate token using service account in the namespace
 
