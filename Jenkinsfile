@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t wasimhannure/loadgenerator:latest ."
+                        sh "docker build -t famzi/loadgenerator:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push wasimhannure/loadgenerator:latest"
+                        sh "docker push famzi/loadgenerator:latest"
                     }
                 }
             }
